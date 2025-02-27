@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="empresaForm" novalidate>
+            <h2>Registro de Empresa</h2>
+
+            <div class="form-group">
+                <label for="nombre">Nombre  <span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" required>
+                <span class="error-message" id="nombreError">Este campo es obligatorio.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="cif">CIF <span class="required">*</span></label>
+                <input type="text" id="cif" name="cif" required>
+                <span class="error-message" id="cifError">El CIF debe tener el formato correcto (Ej: A12345678).</span>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono <span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <span class="error-message" id="telefonoError">Debe ser un teléfono válido (Ej: 600123456).</span>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje <span class="required">*</span></label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                <span class="error-message" id="mensajeError">Este campo es obligatorio.</span>
+            </div>
+
+            <button type="submit">Enviar</button>
+            <p id="mensajeRespuesta"></p>
+        </form>
+    </div>
+
+    <script src="scrip.js"></script>
+</body>
+</html>
